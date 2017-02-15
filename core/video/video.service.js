@@ -43,7 +43,6 @@
     }
 
     function getVideosList() {
-      console.log(paramsVideoList);
       return $http({
           method: 'GET',
           url: Video_Lits_URL,

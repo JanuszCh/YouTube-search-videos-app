@@ -104,7 +104,6 @@ angular.module('core.video', []);
     }
 
     function getVideosList() {
-      console.log(paramsVideoList);
       return $http({
         method: 'GET',
         url: Video_Lits_URL,
@@ -186,7 +185,6 @@ angular.module('core.video', []);
 
     videoService.getVideoDetail().then(function (data) {
       ctrl.video = data.items[0];
-      console.log(ctrl.video);
       insertVideoTags(ctrl.video);
       insertVideoDuration(ctrl.video);
       insertVideoPublishedAt(ctrl.video);
@@ -346,7 +344,6 @@ angular.module('core.video', []);
       if (isResponseValid(data)) {
         ctrl.videos = data.items;
         showSortOptions();
-        console.log(data.items);
         sortOptionsSelected(ctrl.sort);
       } else {
         showModalWindow(noVideosErrorMsg);
@@ -361,7 +358,6 @@ angular.module('core.video', []);
 
     function searchVideos() {
       if (isSearchInputValid()) {
-        console.log('load videos ON');
         videoService.setQueryParams(setParams());
         loadVideos();
       } else {

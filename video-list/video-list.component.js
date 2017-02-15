@@ -143,7 +143,6 @@
       if (isResponseValid(data)) {
         ctrl.videos = data.items;
         showSortOptions();
-        console.log(data.items);
         sortOptionsSelected(ctrl.sort);
       } else {
         showModalWindow(noVideosErrorMsg);
@@ -158,7 +157,6 @@
 
     function searchVideos() {
       if (isSearchInputValid()) {
-        console.log('load videos ON');
         videoService.setQueryParams(setParams());
         loadVideos();
       } else {

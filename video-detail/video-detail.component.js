@@ -43,7 +43,6 @@
 
     videoService.getVideoDetail().then(function (data) {
       ctrl.video = data.items[0];
-      console.log(ctrl.video);
       insertVideoTags(ctrl.video);
       insertVideoDuration(ctrl.video);
       insertVideoPublishedAt(ctrl.video);
