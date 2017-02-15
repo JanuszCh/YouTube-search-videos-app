@@ -10,7 +10,7 @@ You can click on particular video to watch it and see details of it.
 
 ### Demo
 
-LINK --------
+https://januszch.github.io/YouTube-search-videos-app/#/video/
 
 ### Installation
 
