@@ -160,7 +160,7 @@
         loadVideos();
       } else {
         showModalWindow(searchErrorMsg);
-      } 
+      }
     }
 
     function sortOptionsSelected(sortType) {
