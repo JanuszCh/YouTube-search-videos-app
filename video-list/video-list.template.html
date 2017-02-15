@@ -43,7 +43,7 @@
     </div>
     <div class="col-md-9">
       <ul class="list">
-        <li ng-repeat="video in $ctrl.videos | orderBy:$ctrl.sortQuery:$ctrl.reverse" ui-sref="state2" class="list-element video-list-item">
+        <li ng-repeat="video in $ctrl.videos | orderBy:$ctrl.sortQuery:$ctrl.reverse" ui-sref="videoDetails" class="list-element video-list-item">
           <div ng-click="$ctrl.setVideoId(video.id.videoId)" class="list-content">
             <img ng-src={{video.snippet.thumbnails.default.url}} alt="thumbnail">
             <span class="list-content-title">{{video.snippet.title}}</span>

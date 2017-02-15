@@ -6,12 +6,12 @@ function config($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/video/');
 
     $stateProvider
-        .state('state1', {
+        .state('videoSearch', {
             url: '/video/',
             template: '<video-list></video-list>'
         })
-        .state('state2', {
-            url: '/video/detail',
+        .state('videoDetails', {
+            url: '/video/details',
             template: '<video-detail></video-detail>'
         });
 }

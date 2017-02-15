@@ -16,11 +16,11 @@ config.inject = ['$stateProvider', '$urlRouterProvider'];
 function config($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/video/');
 
-    $stateProvider.state('state1', {
+    $stateProvider.state('videoSearch', {
         url: '/video/',
         template: '<video-list></video-list>'
-    }).state('state2', {
-        url: '/video/detail',
+    }).state('videoDetails', {
+        url: '/video/details',
         template: '<video-detail></video-detail>'
     });
 }
@@ -227,7 +227,6 @@ angular.module('core.video', []);
     var modalWindow = document.querySelector('#modal');
     var modalMsgField = document.querySelector('#modal-msg-field');
     var searchErrorMsg = 'The "Search query" field should contain at least one character';
-    var dateErrorMsg = '"Published after" date must be earlier than "Published before" date';
     var noVideosErrorMsg = 'No results match your search criteria';
     ctrl.videoDefinitionsOptions = [{
       value: 'any',

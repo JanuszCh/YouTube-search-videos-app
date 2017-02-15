@@ -15,7 +15,6 @@
     const modalWindow = document.querySelector('#modal');
     const modalMsgField = document.querySelector('#modal-msg-field');
     const searchErrorMsg = 'The "Search query" field should contain at least one character';
-    const dateErrorMsg = '"Published after" date must be earlier than "Published before" date';
     const noVideosErrorMsg = 'No results match your search criteria';
     ctrl.videoDefinitionsOptions = [{
         value: 'any',
