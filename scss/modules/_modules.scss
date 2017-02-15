@@ -1,0 +1,17 @@
+%logo-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: $backgroundColor;
+  border-bottom: 1px solid $mainColor;
+  display: flex;
+  align-items: center;
+}
+
+%logo {
+  font-family: $logoFont;
+  color: $mainColor;
+  display: inline-block;
+  margin-left: 7px;
+}

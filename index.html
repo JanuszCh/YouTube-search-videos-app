@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="ytApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube videos search app</title>
+  <meta name="description" content="Easy way to search videos on YouTube!">
+  <meta name="keywords" content="you tube, yt, youtube, videos">
+  <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="dist/css/style.css" />
+</head>
+
+<body>
+  <header class="app-header">
+    <div class="app-logo-container">
+      <img src="dist/images/yt_logo.png" alt="YouTube_logo" height="49px">
+      <h1 class="app-logo">videos search app</h1>
+    </div>
+  </header>
+  <div class="view-container">
+    <div ui-view></div>
+  </div>
+  <div id="modal" class="modal hide">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="dist/images/yt_logo.png" alt="YouTube_logo" height="27px">
+        <h1 class="modal-header-logo">videos search app</h1>
+        <span id="close-modal" class="modal-close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div id="modal-msg-field"></div>
+      </div>
+    </div>
+  </div>
+  <script src="external/moment.min.js"></script>
+  <script src="external/pikaday.js"></script>
+  <script src="dist/js/external.js"></script>
+  <script src="dist/js/app.js"></script>
+</body>
+
+</html>

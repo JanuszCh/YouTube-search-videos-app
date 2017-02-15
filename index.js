@@ -1,0 +1,9 @@
+require('./app.module');
+require('./app.config');
+require('./core/core.module');
+require('./core/video/video.module');
+require('./core/video/video.service');
+require('./video-list/video-list.module');
+require('./video-list/video-list.component');
+require('./video-detail/video-detail.module');
+require('./video-detail/video-detail.component');

@@ -1,0 +1,23 @@
+body {
+  background-color: $backgroundColor;
+  .app-header {
+    height: 100px;
+    margin-bottom: 20px;
+    .app-logo-container {
+      @extend %logo-container;
+      width: 100%;
+      height: 100px;
+      position: fixed;
+      z-index: 1;
+      flex-wrap: wrap;
+      justify-content: center;
+      .app-logo {
+        @extend %logo;
+        font-size: 45px;
+      }
+    }
+  }
+  .hide {
+    display: none;
+  }
+}

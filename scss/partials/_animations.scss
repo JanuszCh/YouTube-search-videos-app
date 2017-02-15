@@ -1,0 +1,20 @@
+  .view-container {
+  position: relative;
+}
+
+.video-list-item.ng-enter,
+.video-list-item.ng-move {
+  transition: 0.5s linear all;
+}
+
+.video-list-item.ng-enter,
+.video-list-item.ng-move {
+  height: 0;
+  opacity: 0;
+}
+
+.video-list-item.ng-enter.ng-enter-active,
+.video-list-item.ng-move.ng-move-active {
+  height: 110px;
+  opacity: 1;
+}

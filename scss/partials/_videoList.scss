@@ -1,0 +1,47 @@
+.search-form {
+  position: fixed;
+  top: 120px;
+  @media (max-width: $mobileWidth) {
+    display: block;
+    position: static;
+  }
+  .input-label {
+    width: 100%;
+    .input-title {
+      font-size: 18px;
+    }
+    .input {
+      text-align: center;
+      font-size: 18px;
+      background-color: white;
+    }
+  }
+}
+
+.list {
+  margin-left: 35px;
+  @media (max-width: $mobileWidth) {
+    margin: 0;
+  }
+  .list-element {
+    border: 2px solid #286090;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    height: 110px;
+    cursor: pointer;
+    &:hover {
+      border: 2px solid white;
+    }
+    .list-content {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      .list-content-title {
+        font-size: 18px;
+        margin-left: 10px;
+      }
+    }
+  }
+}

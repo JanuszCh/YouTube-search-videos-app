@@ -1,0 +1,63 @@
+<div class="container">
+  <iframe ng-src="{{$ctrl.url}}" allowfullscreen class="details-video"></iframe>
+  <table class="table details-table">
+    <caption class="details-table-title">Video details</caption>
+    <tr>
+      <td class="details-table-detail-title">video id:</td>
+      <td>{{$ctrl.videoId}}</td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">title:</td>
+      <td>{{$ctrl.video.snippet.title}}</td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">description:</td>
+      <td>{{$ctrl.video.snippet.description}}</td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">channel title:</td>
+      <td>{{$ctrl.video.snippet.channelTitle}}</td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">published at:</td>
+      <td id="video-publishedAt"></td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">views:</td>
+      <td>{{$ctrl.video.statistics.viewCount}}</td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">likes:</td>
+      <td>{{$ctrl.video.statistics.likeCount}}</td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">dislikes:</td>
+      <td>{{$ctrl.video.statistics.dislikeCount}}</td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">favourites:</td>
+      <td>{{$ctrl.video.statistics.favoriteCount}}</td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">comments:</td>
+      <td>{{$ctrl.video.statistics.commentCount}}</td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">duration:</td>
+      <td id="video-duration"></td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">definition:</td>
+      <td>{{$ctrl.video.contentDetails.definition}}</td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">license:</td>
+      <td>{{$ctrl.video.status.license}}</td>
+    </tr>
+    <tr>
+      <td class="details-table-detail-title">tags:</td>
+      <td id="video-tags"></td>
+    </tr>
+  </table>
+  <button type="buton" ui-sref="state1" class="btn btn-primary btn-lg details-btn"><span class="glyphicon glyphicon-search"></span> NEW SEARCH</button>
+</div>
