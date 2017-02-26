@@ -11,11 +11,11 @@
   videoListController.inject = ['videoService'];
 
   function videoListController(videoService) {
-    const ctrl = this;
-    const modalWindow = document.querySelector('#modal');
-    const modalMsgField = document.querySelector('#modal-msg-field');
-    const searchErrorMsg = 'The "Search query" field should contain at least one character';
-    const noVideosErrorMsg = 'No results match your search criteria';
+    const ctrl = this,
+          modalWindow = document.querySelector('#modal'),
+          modalMsgField = document.querySelector('#modal-msg-field'),
+          searchErrorMsg = 'The "Search query" field should contain at least one character',
+          noVideosErrorMsg = 'No results match your search criteria';
     ctrl.videoDefinitionsOptions = [{
         value: 'any',
         name: 'Any'

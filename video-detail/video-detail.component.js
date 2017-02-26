@@ -10,8 +10,8 @@
   phoneDetailController.inject = ['$routeParams', 'videoService', '$sce'];
 
   function phoneDetailController($routeParams, videoService, $sce) {
-    const ctrl = this;
-    const URL = 'https://www.youtube.com/embed/';
+    const ctrl = this,
+          URL = 'https://www.youtube.com/embed/';
 
     ctrl.videoId = videoService.getVideoId();
     ctrl.url = $sce.trustAsResourceUrl(URL + ctrl.videoId);
@@ -26,12 +26,6 @@
         document.querySelector('#video-tags').innerText = videoTagsArray.join(', ');
       }
     }
-    
-    // function insertVideoPublishedAt(videoData) {
-    //   if (isDataValid(videoData.snippet.publishedAt)) {
-    //     document.querySelector('#video-publishedAt').innerText = videoData.snippet.publishedAt.slice(0, 10);
-    //   }
-    // }
 
     function insertVideoDuration(videoData) {
       let videoDuration = videoData.contentDetails.duration;

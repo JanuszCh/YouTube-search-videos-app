@@ -67,9 +67,9 @@ angular.module('core.video', []);
   videoService.inject = ['$http'];
 
   function videoService($http) {
-    var API_KEY = 'AIzaSyDkTxa8HHNdbklnxjZSUPScSl1fJMM1a6Y';
-    var Video_Lits_URL = 'https://www.googleapis.com/youtube/v3/search';
-    var Video_Detail_URL = 'https://www.googleapis.com/youtube/v3/videos';
+    var API_KEY = 'AIzaSyDkTxa8HHNdbklnxjZSUPScSl1fJMM1a6Y',
+        Video_Lits_URL = 'https://www.googleapis.com/youtube/v3/search',
+        Video_Detail_URL = 'https://www.googleapis.com/youtube/v3/videos';
     var videoId = '';
     var paramsVideoList = {
       key: API_KEY,
@@ -152,8 +152,8 @@ angular.module('core.video', []);
   phoneDetailController.inject = ['$routeParams', 'videoService', '$sce'];
 
   function phoneDetailController($routeParams, videoService, $sce) {
-    var ctrl = this;
-    var URL = 'https://www.youtube.com/embed/';
+    var ctrl = this,
+        URL = 'https://www.youtube.com/embed/';
 
     ctrl.videoId = videoService.getVideoId();
     ctrl.url = $sce.trustAsResourceUrl(URL + ctrl.videoId);
@@ -168,12 +168,6 @@ angular.module('core.video', []);
         document.querySelector('#video-tags').innerText = videoTagsArray.join(', ');
       }
     }
-
-    // function insertVideoPublishedAt(videoData) {
-    //   if (isDataValid(videoData.snippet.publishedAt)) {
-    //     document.querySelector('#video-publishedAt').innerText = videoData.snippet.publishedAt.slice(0, 10);
-    //   }
-    // }
 
     function insertVideoDuration(videoData) {
       var videoDuration = videoData.contentDetails.duration;
@@ -222,11 +216,11 @@ angular.module('core.video', []);
   videoListController.inject = ['videoService'];
 
   function videoListController(videoService) {
-    var ctrl = this;
-    var modalWindow = document.querySelector('#modal');
-    var modalMsgField = document.querySelector('#modal-msg-field');
-    var searchErrorMsg = 'The "Search query" field should contain at least one character';
-    var noVideosErrorMsg = 'No results match your search criteria';
+    var ctrl = this,
+        modalWindow = document.querySelector('#modal'),
+        modalMsgField = document.querySelector('#modal-msg-field'),
+        searchErrorMsg = 'The "Search query" field should contain at least one character',
+        noVideosErrorMsg = 'No results match your search criteria';
     ctrl.videoDefinitionsOptions = [{
       value: 'any',
       name: 'Any'

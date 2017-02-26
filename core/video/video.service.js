@@ -6,9 +6,9 @@
   videoService.inject = ['$http'];
 
   function videoService($http) {
-    const API_KEY = 'AIzaSyDkTxa8HHNdbklnxjZSUPScSl1fJMM1a6Y';
-    const Video_Lits_URL = 'https://www.googleapis.com/youtube/v3/search';
-    const Video_Detail_URL = 'https://www.googleapis.com/youtube/v3/videos';
+    const API_KEY = 'AIzaSyDkTxa8HHNdbklnxjZSUPScSl1fJMM1a6Y',
+          Video_Lits_URL = 'https://www.googleapis.com/youtube/v3/search',
+          Video_Detail_URL = 'https://www.googleapis.com/youtube/v3/videos';
     let videoId = '';
     let paramsVideoList = {
       key: API_KEY,
