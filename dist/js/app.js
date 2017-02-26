@@ -169,11 +169,11 @@ angular.module('core.video', []);
       }
     }
 
-    function insertVideoPublishedAt(videoData) {
-      if (isDataValid(videoData.snippet.publishedAt)) {
-        document.querySelector('#video-publishedAt').innerText = videoData.snippet.publishedAt.slice(0, 10);
-      }
-    }
+    // function insertVideoPublishedAt(videoData) {
+    //   if (isDataValid(videoData.snippet.publishedAt)) {
+    //     document.querySelector('#video-publishedAt').innerText = videoData.snippet.publishedAt.slice(0, 10);
+    //   }
+    // }
 
     function insertVideoDuration(videoData) {
       var videoDuration = videoData.contentDetails.duration;
@@ -187,7 +187,6 @@ angular.module('core.video', []);
       ctrl.video = data.items[0];
       insertVideoTags(ctrl.video);
       insertVideoDuration(ctrl.video);
-      insertVideoPublishedAt(ctrl.video);
     });
   }
 })();
